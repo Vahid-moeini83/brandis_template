@@ -7,7 +7,233 @@
     <script defer src="/src/script.js"></script>
     <title>برندیس | قالب شرکتی</title>
   </head>
-  <body>
-    <h1>وحید معینی من هستم</h1>
+  <body class="body">
+    <!-- Svg -->
+    <svg class="hidden">
+      <symbol
+        id="basket"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+        />
+      </symbol>
+      <symbol
+        id="user"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+        />
+      </symbol>
+      <symbol
+        id="arrow-down"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+      <symbol
+        id="menu"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol
+        id="close"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
+    </svg>
+    <!-- Main body -->
+    <div class="main-page">
+      <!-- Mobile side bar -->
+      <div class="mobile-side-menu hidden-right">
+        <!-- Side bar title -->
+        <div class="side-menu-title">
+          <!-- Side logo -->
+          <img
+            class="brandis-side-logo"
+            src="/src/img/brandis_logo.png"
+            alt="brandis_logo"
+          />
+
+          <!-- Close btn -->
+          <svg class="close-btn">
+            <use href="#close"></use>
+          </svg>
+        </div>
+
+        <!-- Side bar menu -->
+        <nav>
+          <ul class="side-menu-nav">
+            <li class="home-link">
+              <a href="#">صفحه اصلی</a>
+            </li>
+            <li>
+              <a href="#">درخواست سایت</a>
+            </li>
+            <li>
+              <a href="#">وبلاگ</a>
+            </li>
+            <li>
+              <a href="#">نمونه کارها</a>
+            </li>
+            <li>
+              <a href="#">محصولات</a>
+            </li>
+            <li>
+              <a href="#">تماس با ما</a>
+            </li>
+            <li>
+              <a href="#">درباره ما</a>
+            </li>
+            <li>
+              <a href="#">حساب کاربری من</a>
+            </li>
+            <li>
+              <a href="#">سبد خرید</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Header -->
+      <header>
+        <div class="header-container">
+          <div class="template-header">
+            <div class="inner-template-header">
+              <!-- Logo -->
+              <img
+                class="template-header-logo"
+                src="/src/img/brandis_logo.png"
+                alt="brandis_logo"
+              />
+
+              <!-- Divider -->
+              <div class="template-header-divider"></div>
+
+              <!-- Nav -->
+              <nav>
+                <ul class="template-header-nav">
+                  <li class="header-nav-links home-link">
+                    <a href="#">صفحه اصلی</a>
+                  </li>
+                  <li class="header-nav-links">
+                    <a href="#">درخواست سایت</a>
+                  </li>
+                  <li class="header-nav-links">
+                    <a href="#">وبلاگ</a>
+                  </li>
+                  <li class="header-nav-links">
+                    <div class="examples-link">
+                      <a href="#">
+                        نمونه کارها
+                        <!-- arrow down -->
+                        <svg>
+                          <use href="#arrow-down"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <!-- sub menu -->
+                    <div class="sub-menu">
+                      <a href="#">
+                        <span class="sub-menu-dot"></span>
+                        نمونه کار شخصی
+                      </a>
+                      <a href="#">
+                        <span class="sub-menu-dot"></span>
+                        نمونه کار فروشگاهی
+                      </a>
+                      <a href="#">
+                        <span class="sub-menu-dot"></span>
+                        نمونه کار شرکتی
+                      </a>
+                      <a href="#">
+                        <span class="sub-menu-dot"></span>
+                        نمونه کار خبری
+                      </a>
+                    </div>
+                  </li>
+                  <li class="header-nav-links">
+                    <a href="#">محصولات</a>
+                  </li>
+                  <li class="header-nav-links">
+                    <a href="#">تماس با ما</a>
+                  </li>
+                  <li class="header-nav-links">
+                    <a href="#">درباره ما</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- Btns -->
+              <div class="template-header-btns flex-center">
+                <!-- shop basket btn -->
+                <span class="shopping-basket-btn flex-center btn-border-radius">
+                  <svg>
+                    <use href="#basket"></use>
+                  </svg>
+                  <!-- product counter -->
+                  <span class="product-counter flex-center"> 0 </span>
+                </span>
+
+                <!-- login btn -->
+                <a class="login-btn flex-center btn-border-radius" href="#">
+                  <svg>
+                    <use href="#user"></use>
+                  </svg>
+                  <span>ورود و ثبت‌نام</span>
+                </a>
+
+                <!-- responsive nav btn -->
+                <span class="nav-btn flex-center btn-border-radius">
+                  <svg>
+                    <use href="#menu"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Section intro -->
+    </div>
+
+    <!-- Page overlay -->
+    <div class="overlay"></div>
   </body>
 </html>
