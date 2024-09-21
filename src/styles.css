@@ -492,6 +492,47 @@ h3 {
   background-color: var(--blue-dark);
 }
 
+/* Brands section */
+.brands {
+  margin: 100px 0;
+}
+
+.brands-section {
+  border: 1px solid var(--black-dark);
+  border-right: 0;
+  border-left: 0;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  display: flex !important;
+}
+
+/* Target section */
+.target {
+  height: 280px;
+}
+
+.target-section {
+  height: 100%;
+  border-radius: 32px;
+  background: url(/src/img/target-bg.svg) no-repeat center;
+  background-color: var(--green-light);
+}
+
+.target-section-inner {
+  text-align: center;
+}
+
+.target-section-inner h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.target-section-inner span {
+  font-size: 24px;
+}
+
 /* Page overlay */
 .overlay {
   opacity: 0;
@@ -760,6 +801,15 @@ h3 {
   .about-section-text {
     padding: 0 60px;
   }
+
+  /* Target section */
+  .target-section-inner h3 {
+    font-size: 36px;
+  }
+
+  .target-section-inner span {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 580px) {
@@ -847,6 +897,15 @@ h3 {
 
   .about-section-text {
     padding: 0;
+  }
+
+  /* Target section */
+  .target-section-inner h3 {
+    font-size: 32px;
+  }
+
+  .target-section-inner span {
+    font-size: 16px;
   }
 }
 
@@ -950,5 +1009,14 @@ h3 {
 
   .about-section-text {
     padding: 0;
+  }
+
+  /* Target section */
+  .target-section-inner h3 {
+    font-size: 32px;
+  }
+
+  .target-section-inner span {
+    font-size: 16px;
   }
 }

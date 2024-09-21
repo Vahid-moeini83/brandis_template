@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <script defer src="/src/script.js"></script>
     <title>برندیس | قالب شرکتی</title>
   </head>
@@ -385,11 +386,80 @@
         </section>
 
         <!-- Section brands -->
-        <section></section>
+        <section class="brands">
+          <div class="brands-section">
+            <div class="section-container">
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper flex-center">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-1.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-2.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-3.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-4.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-5.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-6.png" alt="brands" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section target -->
+        <section class="target">
+          <div class="target-section flex-center">
+            <div class="section-container">
+              <div class="target-section-inner">
+                <h3>برای برندت، طراحی اختصاصی داشته باش</h3>
+                <span>ما کمکت میکنیم :)</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
 
     <!-- Page overlay -->
     <div class="overlay"></div>
+
+    <script src="/src/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 6,
+        centeredSlides: true,
+        // loop: true,
+        // autoplay: {
+        //   delay: 2000,
+        //   disableOnInteraction: false,
+        // },
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        //   },
+        //   768: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //   },
+        //   1024: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 50,
+        //   },
+        // },
+      });
+    </script>
   </body>
 </html>
