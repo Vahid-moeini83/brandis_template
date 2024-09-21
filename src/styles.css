@@ -47,8 +47,11 @@
   --yellow-dark: #ecb704;
   --green-light: #ecfedb;
   --green-dark: #a9d284;
+  --blue-light: #cdefff;
+  --blue-dark: #66b4f4;
   --black-dark: #403d39;
   --gray-light: #e9e9e9;
+  --gray-medium: #c6c6c6;
   --gray-dark: #6f6f6f;
   --white-light: #fff;
 }
@@ -66,6 +69,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+h3 {
+  font-family: var(--font-secondary_medium);
 }
 
 /* Repetitive classes */
@@ -101,6 +108,23 @@ ul {
 .sections-style {
   padding: 32px;
   border-radius: 32px;
+}
+
+.sections-boxes-style {
+  border-radius: 16px;
+  border: 1px solid var(--black-dark);
+  background-color: var(--white-light);
+}
+
+.boxes-bar-line {
+  position: absolute;
+  bottom: -13px;
+  left: 14px;
+  content: "";
+  height: 12px;
+  width: calc(50% - 16px);
+  border-radius: 0 0 16px 16px;
+  transition: all 0.3s;
 }
 
 /* Main */
@@ -358,10 +382,6 @@ ul {
 }
 
 /* Section services */
-.services {
-  margin-bottom: 50px;
-}
-
 .services-section {
   display: flex;
   align-items: center;
@@ -371,38 +391,105 @@ ul {
   background-color: var(--green-light);
 }
 
-.services-inner-boxes {
-  position: relative;
+.services-inner-boxes,
+.about-inner-boxes {
   width: 376px;
+  padding: 20px 10px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 12px;
-  padding: 20px 10px;
-  border-radius: 16px;
-  border: 1px solid var(--black-dark);
-  background-color: var(--white-light);
 }
 
 .services-inner-boxes h3 {
   font-size: 21px;
-  font-family: var(--font-secondary_medium);
 }
 
 .services-bar {
-  position: absolute;
-  bottom: -13px;
-  left: 14px;
-  content: "";
-  height: 12px;
-  width: calc(50% - 16px);
-  border-radius: 0 0 16px 16px;
   background-color: var(--green-dark);
-  transition: all 0.3s;
 }
 
-.services-inner-boxes:hover .services-bar {
+.sections-boxes-style:hover .boxes-bar-line {
   width: calc(100% - 32px);
+}
+
+/* Section about us */
+.about-us {
+  margin-top: 100px;
+}
+
+.about-section {
+  background-color: var(--blue-light);
+}
+
+.about-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.about-section-title {
+  flex-direction: column;
+  position: relative;
+}
+
+.about-section-title h3 {
+  width: 440px;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  font-size: 32px;
+  background-color: var(--blue-light);
+}
+
+.dash-line {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px dashed var(--gray-medium);
+}
+
+.about-shape {
+  position: absolute;
+  left: 92px;
+  top: 28px;
+}
+
+.about-section-text {
+  padding: 0 200px;
+}
+
+.about-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 44px;
+  flex-wrap: wrap;
+}
+
+.about-inner-boxes {
+  width: 396px;
+}
+
+.about-inner-boxes div {
+  text-align: right;
+}
+
+.about-inner-boxes p {
+  color: var(--gray-dark);
+}
+
+.about-inner-boxes h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-bar {
+  background-color: var(--blue-dark);
 }
 
 /* Page overlay */
@@ -466,6 +553,11 @@ ul {
 
   .services-inner-boxes h3 {
     font-size: 20px;
+  }
+
+  /* Section about us */
+  .about-inner-boxes {
+    width: 520px;
   }
 }
 
@@ -576,6 +668,19 @@ ul {
   .services-section {
     column-gap: 8px;
   }
+
+  /* Section about us */
+  .about-inner-boxes {
+    width: 360px;
+  }
+
+  .about-section-text {
+    padding: 0 80px;
+  }
+
+  .about-inner-boxes p {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 580px) and (max-width: 768px) {
@@ -639,6 +744,21 @@ ul {
   /* Services section */
   .services-inner-boxes {
     width: 100%;
+  }
+
+  /* About us section */
+  .about-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-inner-boxes {
+    width: 90%;
+  }
+
+  .about-section-text {
+    padding: 0 60px;
   }
 }
 
@@ -704,6 +824,29 @@ ul {
 
   .services-inner-boxes h3 {
     font-size: 18px;
+  }
+
+  /* About us section */
+  .about-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-inner-boxes {
+    width: 100%;
+  }
+
+  .about-inner-boxes h3 {
+    font-size: 20px;
+  }
+
+  .about-inner-boxes p {
+    font-size: 14px;
+  }
+
+  .about-section-text {
+    padding: 0;
   }
 }
 
@@ -784,5 +927,28 @@ ul {
 
   .services-inner-boxes h3 {
     font-size: 18px;
+  }
+
+  /* About us section */
+  .about-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-inner-boxes {
+    width: 100%;
+  }
+
+  .about-inner-boxes h3 {
+    font-size: 20px;
+  }
+
+  .about-inner-boxes p {
+    font-size: 14px;
+  }
+
+  .about-section-text {
+    padding: 0;
   }
 }
