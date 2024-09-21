@@ -39,11 +39,14 @@
   /* fonts root */
   --font-primary: "Dana";
   --font-primary_medium: "DanaMedium";
+  --font-secondary_medium: "MorabbaMedium";
   --font-secondary_bold: "MorabbaBold";
 
   /* colors root */
   --yellow-light: #fff1b8;
   --yellow-dark: #ecb704;
+  --green-light: #ecfedb;
+  --green-dark: #a9d284;
   --black-dark: #403d39;
   --gray-light: #e9e9e9;
   --gray-dark: #6f6f6f;
@@ -93,6 +96,11 @@ ul {
 
 .show-right {
   right: 0;
+}
+
+.sections-style {
+  padding: 32px;
+  border-radius: 32px;
 }
 
 /* Main */
@@ -298,8 +306,14 @@ ul {
 }
 
 /* Section intro */
+.intro {
+  margin-bottom: 50px;
+}
+
 .intro-section {
-  padding: 46px 32px 32px 32px;
+  padding-top: 46px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   background-color: var(--yellow-light);
 }
 
@@ -343,6 +357,54 @@ ul {
   height: 20px;
 }
 
+/* Section services */
+.services {
+  margin-bottom: 50px;
+}
+
+.services-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 44px;
+  flex-wrap: wrap;
+  background-color: var(--green-light);
+}
+
+.services-inner-boxes {
+  position: relative;
+  width: 376px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+  padding: 20px 10px;
+  border-radius: 16px;
+  border: 1px solid var(--black-dark);
+  background-color: var(--white-light);
+}
+
+.services-inner-boxes h3 {
+  font-size: 21px;
+  font-family: var(--font-secondary_medium);
+}
+
+.services-bar {
+  position: absolute;
+  bottom: -13px;
+  left: 14px;
+  content: "";
+  height: 12px;
+  width: calc(50% - 16px);
+  border-radius: 0 0 16px 16px;
+  background-color: var(--green-dark);
+  transition: all 0.3s;
+}
+
+.services-inner-boxes:hover .services-bar {
+  width: calc(100% - 32px);
+}
+
 /* Page overlay */
 .overlay {
   opacity: 0;
@@ -355,7 +417,7 @@ ul {
 }
 
 /* Responsive template */
-@media only screen and (min-width: 1120px) and (max-width: 1220px) {
+@media only screen and (min-width: 1120px) and (max-width: 1238px) {
   /* Template header */
   .header-container {
     max-width: 960px;
@@ -374,6 +436,7 @@ ul {
     max-width: 1120px;
   }
 
+  /* Section intro */
   .intro-subtitle {
     font-size: 20px;
   }
@@ -395,6 +458,15 @@ ul {
   .intro-inner-left img {
     width: 560px;
   }
+
+  /* Section services */
+  .services-inner-boxes {
+    width: 320px;
+  }
+
+  .services-inner-boxes h3 {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 860px) and (max-width: 1120px) {
@@ -413,6 +485,7 @@ ul {
     display: flex;
   }
 
+  /* Section intro */
   .intro-section {
     padding-top: 144px;
     flex-direction: column;
@@ -439,6 +512,15 @@ ul {
 
   .intro-inner-left img {
     width: 440px;
+  }
+
+  /* Services section */
+  .services-inner-boxes {
+    width: 360px;
+  }
+
+  .services-section {
+    column-gap: 10px;
   }
 }
 
@@ -457,6 +539,7 @@ ul {
     display: flex;
   }
 
+  /* Section intro */
   .intro-section {
     padding-top: 144px;
     flex-direction: column;
@@ -483,6 +566,15 @@ ul {
 
   .intro-inner-left img {
     width: 440px;
+  }
+
+  /* Services section */
+  .services-inner-boxes {
+    width: 320px;
+  }
+
+  .services-section {
+    column-gap: 8px;
   }
 }
 
@@ -515,6 +607,7 @@ ul {
     display: flex;
   }
 
+  /* Section intro */
   .intro-section {
     padding-top: 144px;
     flex-direction: column;
@@ -542,9 +635,14 @@ ul {
   .intro-inner-left img {
     width: 440px;
   }
+
+  /* Services section */
+  .services-inner-boxes {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width:480px) and (max-width: 580px) {
+@media only screen and (min-width: 480px) and (max-width: 580px) {
   /* Template header */
   .header-container,
   .section-container {
@@ -568,6 +666,7 @@ ul {
     height: 40px;
   }
 
+  /* Section intro */
   .intro-section {
     padding-top: 68px;
     flex-direction: column;
@@ -597,6 +696,15 @@ ul {
   .intro-inner-left img {
     width: 320px;
   }
+
+  /* Services section */
+  .services-inner-boxes {
+    width: 100%;
+  }
+
+  .services-inner-boxes h3 {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -623,6 +731,7 @@ ul {
     height: 36px;
   }
 
+  /* Section intro */
   .intro-section {
     padding-top: 68px;
     flex-direction: column;
@@ -661,5 +770,19 @@ ul {
 
   .intro-inner-left img {
     width: 280px;
+  }
+
+  /* Services section */
+  .services-inner-boxes {
+    width: 100%;
+  }
+
+  .services-inner-boxes img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .services-inner-boxes h3 {
+    font-size: 18px;
   }
 }
