@@ -320,11 +320,11 @@
         <section class="about-us">
           <div class="about-section">
             <div class="section-container">
-              <div class="about-section-inner">
+              <div class="about-section-inner sections-flex-col">
                 <!-- about us title -->
-                <div class="about-section-title flex-center">
+                <div class="about-section-title sections-title-box flex-center">
                   <span>درباره ما</span>
-                  <h3>بهترین ها در زمینه طراحی سایت</h3>
+                  <h3 class="sections-title">بهترین ها در زمینه طراحی سایت</h3>
                   <span class="dash-line"></span>
                   <img
                     class="about-shape"
@@ -389,11 +389,8 @@
         <section class="brands">
           <div class="brands-section">
             <div class="section-container">
-              <!-- Slider main container -->
               <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper flex-center">
-                  <!-- Slides -->
+                <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img src="/src/img/brands-1.png" alt="brands" />
                   </div>
@@ -412,11 +409,22 @@
                   <div class="swiper-slide">
                     <img src="/src/img/brands-6.png" alt="brands" />
                   </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-1.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-2.png" alt="brands" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/brands-3.png" alt="brands" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <!-- Section plans -->
 
         <!-- Section target -->
         <section class="target">
@@ -425,6 +433,62 @@
               <div class="target-section-inner">
                 <h3>برای برندت، طراحی اختصاصی داشته باش</h3>
                 <span>ما کمکت میکنیم :)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section our team -->
+
+        <!-- Sectiont your comments -->
+
+        <!-- Section social media -->
+        <section class="social-media">
+          <div class="section-container">
+            <div class="social-media-section sections-flex-col sections-style">
+              <div class="social-media-title sections-title-box flex-center">
+                <span>شبکه های ما</span>
+                <h3 class="sections-title">همراهی شما، دلگرمی برای ماست</h3>
+                <span class="dash-line"></span>
+              </div>
+
+              <div class="social-links-box">
+                <a class="social-media-links sections-boxes-style" href="#">
+                  <div class="flex-center">
+                    <img src="/src/img/telegram.svg" alt="telegram" />
+                    <h3>کانال تلگرام</h3>
+                  </div>
+                  <svg>
+                    <use href="#arrow-left"></use>
+                  </svg>
+                </a>
+                <a class="social-media-links sections-boxes-style" href="#">
+                  <div class="flex-center">
+                    <img src="/src/img/email.svg" alt="telegram" />
+                    <h3>ایمیل</h3>
+                  </div>
+                  <svg>
+                    <use href="#arrow-left"></use>
+                  </svg>
+                </a>
+                <a class="social-media-links sections-boxes-style" href="#">
+                  <div class="flex-center">
+                    <img src="/src/img/whatsapp.png" alt="telegram" />
+                    <h3>واتس آپ</h3>
+                  </div>
+                  <svg>
+                    <use href="#arrow-left"></use>
+                  </svg>
+                </a>
+                <a class="social-media-links sections-boxes-style" href="#">
+                  <div class="flex-center">
+                    <img src="/src/img/instagram.svg" alt="telegram" />
+                    <h3>اینستاگرام</h3>
+                  </div>
+                  <svg>
+                    <use href="#arrow-left"></use>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -438,27 +502,27 @@
     <script src="/src/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
-        slidesPerView: 6,
+        slidesPerView: 1,
         centeredSlides: true,
-        // loop: true,
-        // autoplay: {
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // },
-        // breakpoints: {
-        //   640: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20,
-        //   },
-        //   768: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40,
-        //   },
-        //   1024: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 50,
-        //   },
-        // },
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          580: {
+            slidesPerView: 2,
+            // spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            // spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
       });
     </script>
   </body>
