@@ -453,31 +453,39 @@
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-1.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-1.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-2.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-2.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-3.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-3.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-4.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-4.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-5.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-5.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-6.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-6.png" alt="brands" />
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img src="/src/img/brands-1.png" alt="brands" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/src/img/brands-2.png" alt="brands" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/src/img/brands-3.png" alt="brands" />
+                    <div class="flex-center">
+                      <img src="/src/img/brands-4.png" alt="brands" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1012,21 +1020,21 @@
     <script src="/src/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        centeredSlides: true,
+        slidesPerView: 2,
         loop: true,
         autoplay: {
           delay: 3500,
+          centeredSlides: true,
           disableOnInteraction: false,
         },
         breakpoints: {
-          580: {
-            slidesPerView: 3,
+          768: {
+            slidesPerView: 4,
             // spaceBetween: 20,
           },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 10,
+          1120: {
+            slidesPerView: 6,
+            // spaceBetween: 10,
           },
         },
       });
