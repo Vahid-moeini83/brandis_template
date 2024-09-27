@@ -9,6 +9,9 @@ const scrollUpBtn = document.querySelector(".scroll-up-btn");
 const mainPage = document.querySelector(".main-page");
 const examplesTabsMenu = document.querySelector(".examples-tabs-menu");
 const examplesTabs = document.querySelectorAll(".examples-tabs");
+const commentQuot = document.querySelectorAll(".comment-quot");
+const commentImg = document.querySelectorAll(".comment-img");
+const commentBarLine = document.querySelectorAll(".comment-bar");
 
 /////////////////////////////
 // Open & close side menu
@@ -61,3 +64,22 @@ examplesTabsMenu.addEventListener("click", function (event) {
   clickedTab.classList.add("example-active-tab");
   clickedTab.children[0].classList.add("active-tab-marker");
 });
+
+// Set bgcolor to comment elements
+const bgColors = ["blue-light", "blue-dark", "green-dark"];
+
+const setCommentBgColor = function (element) {
+  element.forEach((item) => {
+    for (const entry of bgColors) {
+      if (item.dataset.bgcolor === entry) {
+        if (element === commentQuot) {
+          const imgSrc = `/src/img/quot-${entry}.png`;
+          item.setAttribute("src", imgSrc);
+        } else item.style.background = `var(--${entry})`;
+      }
+    }
+  });
+};
+setCommentBgColor(commentQuot);
+setCommentBgColor(commentImg);
+setCommentBgColor(commentBarLine);
