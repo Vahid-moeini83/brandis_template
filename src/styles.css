@@ -1,4 +1,4 @@
-/* Fonts */
+/* Import fonts */
 @font-face {
   font-family: "Dana";
   src: url("../src/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
@@ -34,15 +34,17 @@
   src: url("../src/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
   font-display: swap;
 }
+
 /* Root */
 :root {
-  /* fonts root */
+  /* fonts */
   --font-primary: "Dana";
   --font-primary_medium: "DanaMedium";
+  --font-secondary_light: "MorabbaLight";
   --font-secondary_medium: "MorabbaMedium";
   --font-secondary_bold: "MorabbaBold";
 
-  /* colors root */
+  /* colors */
   --purple-light: #fbf6ff;
   --purple-dark: #a865f8;
   --pink-light: #ffdddc;
@@ -92,7 +94,7 @@ h3 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .flex-center {
@@ -424,6 +426,10 @@ h3 {
 }
 
 /* Section services */
+.services {
+  margin-bottom: 100px;
+}
+
 .services-section {
   display: flex;
   align-items: center;
@@ -454,6 +460,92 @@ h3 {
 
 .sections-boxes-style:hover .boxes-bar-line {
   width: calc(100% - 32px);
+}
+
+/* Section examples */
+.section-examples-title h3 {
+  width: 480px;
+  background-color: var(--white-light);
+}
+
+.examples-tabs-menu {
+  gap: 40px;
+}
+
+.examples-tabs {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 22px;
+  transition: all 0.4s;
+  color: var(--gray-dark);
+  font-family: var(--font-secondary_light);
+}
+
+.example-active-tab {
+  color: var(--yellow-dark);
+}
+
+.active-tab-marker {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  background-color: var(--yellow-dark);
+}
+
+.examples-tabs-box {
+  margin-bottom: 32px;
+}
+
+.example-slides-box {
+  position: relative;
+}
+
+.example-slide a img {
+  border-radius: 16px 16px 0 0;
+  width: 396px;
+  height: 100%;
+}
+
+.example-slide div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.example-slide div a {
+  font-size: 14px;
+  width: 100px;
+  height: 48px;
+  transition: all 0.5s;
+  background-color: var(--gray-light);
+}
+
+.example-slide div a:hover {
+  transition: all 0.4s;
+  background-color: var(--yellow-dark);
+}
+
+.example-swiper .swiper-pagination {
+  margin-top: 20px;
+  position: unset !important;
+}
+
+.example-swiper .swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  background-color: var(--gray-dark) !important;
+}
+
+.example-swiper .swiper-pagination-bullet-active {
+  transition: all 0.3s;
+  width: 24px !important;
+  border-radius: 4px !important;
+  background-color: var(--yellow-dark) !important;
 }
 
 /* Section about us */
@@ -1106,6 +1198,25 @@ h3 {
   border-bottom: 1px solid var(--footer-dark);
 }
 
+.scroll-up-btn {
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 32px;
+  z-index: 9;
+  transition: all 0.3s;
+  color: var(--black-dark);
+  background-color: var(--yellow-medium);
+}
+
+.scroll-up-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
 .footer-bottom-inner span {
   font-family: var(--font-primary_medium);
 }
@@ -1122,6 +1233,19 @@ h3 {
 }
 
 /* Responsive template */
+@media only screen and (min-width: 1238px) and (max-width: 1280px) {
+  /* Template containers */
+  .header-container,
+  .footer-container {
+    max-width: 1250px;
+  }
+
+  /* Section examples */
+  .example-slide a img {
+    width: 376px;
+  }
+}
+
 @media only screen and (min-width: 1120px) and (max-width: 1238px) {
   /* Template header */
   .header-container,
@@ -1170,6 +1294,11 @@ h3 {
     width: 320px;
   }
 
+  /* Section examples */
+  .example-slide a img {
+    width: 348px;
+  }
+
   .services-inner-boxes h3 {
     font-size: 20px;
   }
@@ -1201,7 +1330,7 @@ h3 {
   }
 }
 
-@media only screen and (min-width: 860px) and (max-width: 1120px) {
+@media only screen and (min-width: 860px) and (max-width: 1119px) {
   /* Template header */
   .header-container,
   .section-container,
@@ -1254,6 +1383,11 @@ h3 {
 
   .services-section {
     column-gap: 10px;
+  }
+
+  /* Section examples */
+  .examples-tabs {
+    font-size: 19px;
   }
 
   /* Section plans */
@@ -1310,11 +1444,15 @@ h3 {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 860px) {
+@media only screen and (min-width: 768px) and (max-width: 859px) {
   /* Template header */
   .header-container,
   .footer-container {
     max-width: 760px;
+  }
+
+  .section-container {
+    max-width: 768px;
   }
 
   .template-header-divider,
@@ -1362,6 +1500,18 @@ h3 {
 
   .services-section {
     column-gap: 8px;
+  }
+
+  /* Section examples */
+  .examples-tabs-menu {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: unset;
+    padding-bottom: 16px;
+  }
+
+  .example-slide a img {
+    width: 356px;
   }
 
   /* Section about us */
@@ -1454,11 +1604,15 @@ h3 {
   }
 }
 
-@media only screen and (min-width: 580px) and (max-width: 768px) {
+@media only screen and (min-width: 580px) and (max-width: 767px) {
   /* Template header */
   .header-container,
   .footer-container {
     max-width: 560px;
+  }
+
+  .section-container {
+    max-width: 640px;
   }
 
   .template-header-logo {
@@ -1516,6 +1670,18 @@ h3 {
   /* Services section */
   .services-inner-boxes {
     width: 100%;
+  }
+
+  /* Section examples */
+  .examples-tabs-menu {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: unset;
+    padding-bottom: 16px;
+  }
+
+  .example-slide a img {
+    width: 264px;
   }
 
   /* About us section */
@@ -1641,7 +1807,7 @@ h3 {
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 580px) {
+@media only screen and (min-width: 480px) and (max-width: 579px) {
   /* Template header */
   .header-container,
   .footer-container {
@@ -1707,6 +1873,14 @@ h3 {
 
   .services-inner-boxes h3 {
     font-size: 18px;
+  }
+
+  /* Section examples */
+  .examples-tabs-menu {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: unset;
+    padding-bottom: 16px;
   }
 
   /* About us section */
@@ -1865,7 +2039,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
   /* Template header */
   .header-container,
   .footer-container {
@@ -1946,6 +2120,19 @@ h3 {
 
   .services-inner-boxes h3 {
     font-size: 18px;
+  }
+
+  /* Section examples */
+
+  .section-examples-title h3 {
+    width: 100%;
+  }
+
+  .examples-tabs-menu {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: unset;
+    padding-bottom: 16px;
   }
 
   /* About us section */
