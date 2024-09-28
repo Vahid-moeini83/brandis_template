@@ -1,6 +1,5 @@
 "use strict";
-/////////////////////////////
-// Variables
+///////////////////////////// Variables
 const sideMenuBtn = document.querySelector(".nav-btn");
 const sideMenuCloseBtn = document.querySelector(".close-btn");
 const mobileSideMenu = document.querySelector(".mobile-side-menu");
@@ -13,7 +12,7 @@ const commentQuot = document.querySelectorAll(".comment-quot");
 const commentImg = document.querySelectorAll(".comment-img");
 const commentBarLine = document.querySelectorAll(".comment-bar");
 
-/////////////////////////////
+///////////////////////////// Functions
 // Open & close side menu
 const toggleSideMenu = function () {
   mobileSideMenu.classList.toggle("show-right");
